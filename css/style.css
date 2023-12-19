@@ -1,0 +1,687 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 16px;
+  
+}
+
+/* STYLING AF HEADER*/
+
+/* logo-størrelse og placering*/
+.logo {
+  width: 100px;
+}
+
+.logoburger {
+  padding: 18px;
+  display: block;
+  text-align: center;
+} 
+
+/* navigationen */
+.topnav {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: inherit;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  margin-top: 45px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: none;
+  text-align: left;
+}
+
+/* Tilføjelse af hover-effekt */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: #398100
+}
+
+.dropdown-content a:hover {
+ color: #398100;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* STYLING AF MAIN */
+
+/* STYLING AF FORSIDE */
+
+/* Første billede med tekst over */
+.forside-container {
+  width: 100%;
+  height: 70vh;
+  margin-top: 10px;
+}
+
+.forside-container img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlap {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding: 20px;
+  color: #398100;
+  text-shadow: 2px 2px 8px rgb(255, 255, 255);
+}
+
+.overlap p {
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #000000;
+  text-shadow: 2px 2px 10px rgb(255, 255, 255);
+}
+
+.overlap .button {
+  padding: 10px 20px;
+  background-color: #398100;
+  color: #FFD2E6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button {
+  transition: .5s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* De 4 billede med tekst over */
+.kategoribilleder {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.kategoribilleder img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.kategori-overlap h2 {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+  color: #000000;
+  transition: .5s;
+}
+
+.kategori-overlap h2:hover {
+  color: #398100;
+}
+
+.kategori-overlap a {
+  display: block; 
+  position: relative; 
+}
+/* STYLING AF UDVALG-SIDE */
+
+.udvalg-overskrift h2{
+  padding: 20px;
+  margin-bottom: -80px;
+}
+
+.udvalg-billeder {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.udvalg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.udvalg img {
+  width: 390px;
+  margin-top: 60px;
+}
+
+.udvalg h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  margin-top: -50px;
+}
+
+.udvalg-overlap p {
+  font-size: 18px;
+}
+
+/* STYLING AF INFO OM ØLLEN-SIDE */
+
+/* Billede */
+.information-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.info-billede img {
+  width: 390px;
+  margin-bottom: -60px;
+}
+
+.info-billede {
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Tekst */
+.info-tekst {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.info-tekst h3 {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.info-tekst h4 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.info-tekst p {
+  margin-top: 40px;
+}
+
+/* Citat */
+.citat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 20px;
+  color: #398100;
+}
+
+.citat-container img {
+  width: 100px;
+}
+
+.citat-container h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pilen {
+  text-decoration: none;
+  color: #000000;
+  margin-left: 30px;
+}
+
+.pil:hover {
+  color: #398100;
+}
+
+/* STYLING AF BAGGRUND-SIDE */
+
+.historie-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.historie-container img { 
+  width: 100%;
+}
+
+.historie-tekst {
+  padding: 30px;
+}
+
+.historie-tekst h3 {
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.produktion {
+  margin-top: 30px;
+}
+
+/* STYLING AF ØLSMAGNING */
+.smag-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.smag-container img { 
+  width: 100%;
+}
+
+.smag-tekst {
+  padding: 30px;
+  text-align: center;
+  flex-direction: row;
+}
+
+.smag-tekst p {
+  text-align: left;
+}
+
+.smag-container button {
+  padding: 10px 20px;
+  background-color: #FFD2E6;
+  color: #398100;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: .5s;
+}
+
+.smag-container button:hover {
+  transform: scale(1.1);
+}
+
+/* Kortet */
+.kort {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* STYLING AF BUTIK-SIDE */
+
+.find {
+  font-size: 25px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+/* STYLING AF FORHANDLER-SIDE */
+.forhandlere {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.forhandlere-billede img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+ 
+}
+
+.forhandlere-tekst {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.forhandlere-tekst h3 {
+  font-family: 'Playfair Display', serif;
+  color: #000000;
+  padding: 10px;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+.forhandlere-tekst h3:hover {
+  color: #398100;
+}
+
+.forhandlere-tekst a {
+  text-decoration: none;
+}
+
+/* STYLING AF MERCH-SIDE */
+
+.merch-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.merch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.merch-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.merch h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+
+}
+
+/* STYLING AF FOOTER */
+
+.footer {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #398100;
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
+
+.kontakt {
+  justify-content: center;
+  text-align: left;
+}
+
+.kontakt-item {
+  padding: 4px;
+}
+
+.kontakt span {
+  font-size: 16px;
+
+}
+.kontakt p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 68px;
+}
+
+.adresse {
+  margin-left: 13px;
+}
+
+.nummer {
+  margin-left: 8px;
+}
+
+.kontakt a {
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 30px;
+}
+
+.footer, .social{
+  text-align: center;
+  color: #000000;
+}
+
+.social a {
+  font-size: 30px;
+  width: 50px;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  color: #ffffff;
+}
+
+.social {
+padding: 30px;
+}
+
+.social a:hover {
+ transform: scale(1.2);
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 10px;
+  
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+}
+.footer, .copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+ 
+/* Media query for mindre skærme */
+@media screen and (max-width: 1150px) {
+  .topnav a, .dropdown .dropbtn {
+    display: none;
+  }
+ .icon {
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
+    font-size: 30px;
+  }
+  .logoburger {
+    padding: 15px;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: white; 
+    z-index: 999; 
+
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-content {
+    margin-top: 0;
+  }
+
+}
+
+/* Media query for større skærme */
+@media screen and (min-width: 1150px) {
+.icon {
+  display: none;
+}
+.topnav {
+  display: flex; /* Aktiverer flexbox */
+  justify-content: center;
+  background-color: #ffffff; /* Tilføjer baggrundsfarve */
+  margin-bottom: 20px;
+}
+
+.kategoribilleder {
+  grid-template-columns: 1fr 1fr;
+}
+
+.information-container {
+  flex-direction: row;
+  justify-content: center;
+}
+.information-container img {
+  width: 500px;
+}
+
+.info-billede {
+  width: 50%;
+}
+
+.info-tekst{
+  width: 50%;
+}
+
+.smag-container {
+  flex-direction: row;
+  gap: 0;
+}
+
+.smag-tekst {
+  width: 50%;
+}
+
+.smag-billede {
+  width: 50%;
+}
+
+.historie-container {
+  flex-direction: row;
+  gap: 0;
+}
+
+.historie-tekst {
+  width: 50%;
+}
+
+.historie-billede {
+  width: 50%;
+}
+
+.forhandlere {
+  flex-direction: row;
+}
+
+.forhandlere img {
+  height: 100vh;
+}
+
+.forhandlere-billede {
+  width: 50%;
+}
+
+.forhandlere-tekst {
+  width: 50%;
+  align-items: center;
+}
+
+}
